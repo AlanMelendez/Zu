@@ -8,13 +8,13 @@ const routes: Routes = [
     path: '',
     children: [
       {
-        path: 'inicio' , component: InicioComponent
+        path: 'bienvenida' , component: InicioComponent
       },
       {
         path: 'preguntas', component: PreguntasComponent
       },
       {
-        path: '**', redirectTo: 'inicio'
+        path: '**', redirectTo: 'bienvenida'
       }
     ]
   }

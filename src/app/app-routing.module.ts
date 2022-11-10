@@ -8,7 +8,10 @@ const routes: Routes = [
     path: 'app', component: AppComponent
   },
   {
-    path: 'index', loadChildren: () => import ('./inicio/inicio.module').then(m => m.InicioModule)
+    path: 'inicio', loadChildren: () => import ('./inicio/inicio.module').then(m => m.InicioModule)
+  },
+  {
+    path: '**', redirectTo: 'index'
   }
 
 ];

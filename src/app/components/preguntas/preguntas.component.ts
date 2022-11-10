@@ -48,17 +48,30 @@ export class PreguntasComponent implements OnInit {
 
   //Funcion para capturar respuesta
   capturarRespuesta (){
-    this.cargarSpinner();
-    this.respuesta = this.respuesta+1;
+    Swal.fire({
+      title: 'Cargando',
+      timer: 2000,
+      timerProgressBar: true,
+      heightAuto: false,
+      didOpen: () => {
+        //Mientras este abierto , cargara el loading.
+        Swal.showLoading()
+      },
+      didClose: () =>{
+        this.respuesta = this.respuesta+1;
+      }
+
+    })
   }
 
   //Mostrar alerta al presionar NO
   alerta(){
     Swal.fire({
-      title: 'Whats going on?',
-      text: 'Do you want to continue',
+      title: '¿Estas segura de la respuesta?',
+      text: 'Intenta de nuevo u.u',
       icon: 'error',
-      confirmButtonText: 'This is cool'
+      confirmButtonText: 'Intentar de nuevo',
+      heightAuto: false
     })
   }
 
