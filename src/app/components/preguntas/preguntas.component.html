@@ -1,0 +1,29 @@
+
+<div class="preguntas">
+  <form
+    [formGroup]="formulario1"
+    class="preguntas1-form"
+    *ngFor="let pregunta of preguntas; let i = index"
+  >
+    <div class="container-preguntas" *ngIf="respuesta == i">
+      <label for="" class="pregunta-title">{{ pregunta }}</label>
+      <div class="container-respuestas">
+        <input
+          type="button"
+          class="btn btn-warning btn-respuesta"
+          (click)="capturarRespuesta()"
+          formControlName="respuesta_si"
+          value="Si"
+        />
+        <input
+          type="button"
+          class="btn btn-warning btn-respuesta"
+          value="No"
+          (click)="alerta()"
+        />
+      </div>
+    </div>
+  </form>
+  <mat-spinner *ngIf="showSpinner"> Hola mundo !</mat-spinner>
+
+</div>
