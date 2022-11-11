@@ -23,3 +23,12 @@ body {
 .spotify{
   width: 80%;
 }
+.boton-home{
+  width: 100%;
+  margin-left: 10px;
+  display: flex;
+ justify-content: flex-start;
+}
+.boton-home-btn{
+
+}

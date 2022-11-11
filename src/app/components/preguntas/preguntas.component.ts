@@ -11,8 +11,6 @@ import Swal from 'sweetalert2';
 })
 export class PreguntasComponent implements OnInit {
 
-
-
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
@@ -34,23 +32,25 @@ export class PreguntasComponent implements OnInit {
   // Preguntas que mostraremos en los input
   preguntas : string [] = [
 
-    'Hola mundo',
-    'Bienvenidos',
-    'Ami pagina',
-    'Cheves o culon',
+    '¿Me contestarias 5 preguntas? 🙏',
+    '¿Crees en el amor? 👀',
+    '¿Eres feliz conmigo? 🥺',
+    '¿Me dejarias formar parte de tu vida? 💘',
+    '¿Estas lista? 🤔',
+    '¿Quieres ser mi novia? 🥰',
 
   ];
 
   formulario1 : FormGroup  = this.fb.group({
-    respuesta_si : ['yes'],
-    respuesta_no : ['no']
+    respuesta_si : ['✔️'],
+    respuesta_no : ['❌']
   })
 
   //Funcion para capturar respuesta
   capturarRespuesta (){
     Swal.fire({
       title: 'Cargando',
-      timer: 2000,
+      timer: 500,
       timerProgressBar: true,
       heightAuto: false,
       didOpen: () => {
@@ -62,13 +62,13 @@ export class PreguntasComponent implements OnInit {
       }
 
     })
+    // this.respuesta = this.respuesta+1;
   }
 
   //Mostrar alerta al presionar NO
   alerta(){
     Swal.fire({
       title: '¿Estas segura de la respuesta?',
-      text: 'Intenta de nuevo u.u',
       icon: 'error',
       confirmButtonText: 'Intentar de nuevo',
       heightAuto: false

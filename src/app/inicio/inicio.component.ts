@@ -46,8 +46,6 @@ export class InicioComponent implements OnInit {
         Swal.fire({
           icon: 'error',
           title: 'Fecha incorrecta',
-          imageUrl: 'https://pin.it/3r3Ryas',
-
           text: 'Intentalo de nuevo :(',
           // footer: '<a href="">Why do I have this issue?</a>',
           heightAuto: false
