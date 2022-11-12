@@ -25,10 +25,10 @@ body {
 }
 .boton-home{
   width: 100%;
-  margin-left: 10px;
   display: flex;
- justify-content: flex-start;
+  justify-content: flex-start;
+  justify-content: flex-start;
 }
 .boton-home-btn{
-
+  margin-left: 10px;
 }

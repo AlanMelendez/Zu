@@ -7,24 +7,28 @@
   >
     <div class="container-preguntas" *ngIf="respuesta == i">
       <label for="" class="pregunta-title">{{ pregunta }}</label>
-      <div class="container-respuestas">
+      <div class="container-respuestas" *ngIf="i != 5" ng-ini>
+
         <input
           type="button"
           class="btn btn-warning btn-respuesta"
-          (click)="capturarRespuesta()"
+          (click)="capturarRespuesta(i)"
           formControlName="respuesta_si"
           value="✔️"
         />
         <input
+          #botonNo
           type="button"
           class="btn btn-warning btn-respuesta"
           formControlName="respuesta_no"
           value="No"
           (click)="alerta()"
+
         />
+        <!-- <div *ngIf="i==5">
+          {{this.moverBoton()}}
+        </div> -->
       </div>
     </div>
   </form>
-  <mat-spinner *ngIf="showSpinner"> Hola mundo !</mat-spinner>
-
 </div>
