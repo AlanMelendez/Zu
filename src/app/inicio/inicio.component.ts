@@ -54,6 +54,24 @@ export class InicioComponent implements OnInit {
     });
   }
 
+  botonEnojada(){
+    Swal.fire({
+      title: 'Espera un momento u.u',
+      timer: 2000,
+      timerProgressBar: true,
+      heightAuto: false,
+      didOpen: () => {
+        //Mientras este abierto , cargara el loading.
+        Swal.showLoading()
+      }
+
+    }).then(value =>{
+      console.log(value)
+      this.router.navigateByUrl('/inicio/parati');
+
+    })
+
+  }
 
   constructor(private router: Router) {}
 

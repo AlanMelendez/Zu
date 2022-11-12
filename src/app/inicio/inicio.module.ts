@@ -8,12 +8,14 @@ import { PreguntasComponent } from '../components/preguntas/preguntas.component'
 import { InicioComponent } from './inicio.component';
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
+import { CardsComponent } from '../components/cards/cards.component';
 
 
 @NgModule({
   declarations: [
     InicioComponent,
-    PreguntasComponent
+    PreguntasComponent,
+    CardsComponent
 
   ],
   imports: [

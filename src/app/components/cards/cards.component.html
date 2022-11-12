@@ -1,0 +1,25 @@
+<div *ngFor="let elemento of frases; let i = index" >
+  <div class="card-one"  *ngIf="i==numero">
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <!-- <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+      </mat-card-header>
+      <img mat-card-image src="assets/img-cards/{{numero}}.jpg" alt="Fotos"  height="200px">
+      <mat-card-content>
+        <p>
+          {{elemento}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions class="action-buttons">
+        <button mat-button routerLink="/inicio">Close</button>
+        <!-- <button mat-button>SHARE</button> -->
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>
+
+

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PreguntasComponent } from '../components/preguntas/preguntas.component';
 import { InicioComponent } from './inicio.component';
+import { CardsComponent } from '../components/cards/cards.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,9 @@ const routes: Routes = [
       },
       {
         path: 'preguntas', component: PreguntasComponent
+      },
+      {
+        path: 'parati', component: CardsComponent
       },
       {
         path: '**', redirectTo: 'bienvenida'

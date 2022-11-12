@@ -7,3 +7,23 @@
   color: white;
   flex-direction: column;
 }
+.botones-inicio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.botones-btn{
+  margin: 10px;
+}
+
+@media (max-width: 600px) {
+  .botones-inicio{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+}
